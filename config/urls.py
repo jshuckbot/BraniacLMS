@@ -5,5 +5,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(url="mainapp/")),
-    path("mainapp/", include("mainapp.urls")),  # включаем пути в рамках сзданного модуля
+    path("mainapp/", include("mainapp.urls", namespace="mainapp")),  # включаем пути в рамках сзданного модуля
 ]
