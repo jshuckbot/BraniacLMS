@@ -18,7 +18,6 @@ class NewsPageView(TemplateView):
         context["news_qs"] = mainapp_models.News.objects.all()[:5]
         return context
 
-
 class NewsPageDetailView(TemplateView):
     template_name = "mainapp/news_detail.html"
 
